@@ -11,7 +11,7 @@
             "id": 2,
             "title": "📋 Clinic Appointment System",
             "description": "A web-based clinic appointment and patient management system developed to streamline appointment booking, treatment records, and clinic operations. The system supports role-based access for doctors, nurses, and staff, ensuring secure data handling and efficient workflow management using database-driven backend logic.",
-            "github": "https://github.com/nadilHesara/LifeLine.git",
+            "github": "https://github.com/Thilokya03/Clinic-Appointment-and-Treatment-Management-System.git",
             "image": "./assets/photos/CATMS.jpg"
         },
         {
