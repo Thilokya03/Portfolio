@@ -33,44 +33,6 @@ Portfolio/
     └── projects.json       # Dynamic projects data
 ```
 
-## 🚀 Getting Started
-
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- No build tools or dependencies required
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/Thilokya03/Portfolio.git
-cd Portfolio
-```
-
-2. Open in browser:
-```bash
-# Simply open the index.html file in your browser
-# Or use a local server for best performance
-```
-
-### Running with Local Server
-
-Using Python:
-```bash
-# Python 3
-python -m http.server 8000
-
-# Python 2
-python -m SimpleHTTPServer 8000
-```
-
-Using Node.js:
-```bash
-npx http-server
-```
-
-Then visit: `http://localhost:8000`
-
 ## 📋 Projects Data Structure
 
 Projects are managed in `assets/projects.json`. Each project includes:
