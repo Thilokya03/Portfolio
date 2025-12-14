@@ -125,4 +125,4 @@ This portfolio website is designed to showcase professional work, skills, and pr
 
 ---
 
-**Last Updated**: December 2024
+**Last Updated**: December 2025
