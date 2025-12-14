@@ -1,0 +1,43 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "🧩 Micro Mouse Robot",
+            "description": "A maze-solving autonomous robot designed using embedded systems and sensor-based navigation. The robot detects walls, plans an optimal path, and navigates through a maze efficiently using real-time decision making and control algorithms. This project focuses on robotics, path-finding logic, and hardware–software integration.",
+            "github": " ",
+            "image": "./assets/photos/project3.jpg"
+        },
+        {
+            "id": 2,
+            "title": "📋 Clinic Appointment System",
+            "description": "A web-based clinic appointment and patient management system developed to streamline appointment booking, treatment records, and clinic operations. The system supports role-based access for doctors, nurses, and staff, ensuring secure data handling and efficient workflow management using database-driven backend logic.",
+            "github": "https://github.com/nadilHesara/LifeLine.git",
+            "image": "./assets/photos/CATMS.jpg"
+        },
+        {
+            "id": 3,
+            "title": "🔲 4-bit Nano Processor",
+            "description": "A custom-designed 4-bit nano processor implementing core computer architecture concepts such as instruction execution, program counter, ALU operations, and control logic. The processor was designed and simulated using hardware description techniques, demonstrating a strong understanding of digital logic and processor design fundamentals.",
+            "github": "https://github.com/adLahiru/Nano_Processor_v1.git",
+            "image": "./assets/photos/nanoprocessor.png "
+        },
+        {
+            "id": 4,
+            "title": "🔲 Life Line",
+            "description": "A healthcare-oriented software system designed to manage blood banks and medical resources efficiently. The application enables tracking of donors, blood availability, and requests, improving response time and data accessibility. The project emphasizes backend development, database integration, and real-world problem solving in healthcare systems.",
+            "github": "https://github.com/nadilHesara/LifeLine.git",
+            "image": "./assets/photos/BBMS.png "
+        },
+        {
+            "id": 5,
+            "title": "🥔 Autonomous Potato Sorting Robot | SLRC - 2025",
+            "description": "A robotic system developed for sorting potatoes based on size and quality using computer vision and mechanical sorting mechanisms. The robot utilizes image processing algorithms to classify potatoes and automate the sorting process, enhancing efficiency in agricultural operations. This project highlights skills in robotics, image analysis, and automation.",
+            "github": "https://github.com/AkhilaNisal/SLRC-2025.git",
+            "image": "./assets/photos/SLRC 2025.jpg"
+        }
+    ],
+
+    "cirtification":[
+
+    ]
+}
