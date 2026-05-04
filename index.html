@@ -1,108 +1,252 @@
 <!DOCTYPE html>
-
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Thilokya Angeesa - Portfolio</title>
-
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-</head>
-
-<body>
-    <!-- Cursor Tracking Stars Background -->
-    <div class="stars-container"></div>
-
-    <div class="container">
-        <div class="navibar">
-
-            <h2 class="navibar-name">Thilokya Angeesa</h2>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Thilokya Angeesa | Portfolio v2.0</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="background">
+            <div class="orb orb-one"></div>
+            <div class="orb orb-two"></div>
+            <div class="grid-overlay"></div>
         </div>
 
-        <section id="home">
-            <div class="intro">
-                <div class="intro-text">
-                    <h2>Hello</h2>
-                    <h2>I'm Thilokya Angeesa</h2>
-                    <h2>Software Developer</h2>
-                </div>
-
-                <div class="profile-wrapper">
-                    <img src="./assets/profilePhoto.png" alt="Profile Photo">
-                </div>
+        <header class="site-header">
+            <div class="container header-inner">
+                <a class="brand" href="#home">Thilokya Angeesa</a>
+                <nav class="nav" id="siteNav">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#research">Research</a>
+                    <a href="#education">Education</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#github">GitHub</a>
+                </nav>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <div class="tech-stack">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Node.js</span>
-                <span>React</span>
-                <span>Python</span>
-                <span>C/C++</span>
-                <span>C#</span>
-                <span>Arduino</span>
-                <span>MySQL</span>
-                <span>Git</span>
-                <span>GitHub</span>
-            </div>
-        </section>
+        </header>
 
-        <!-- About Me Section -->
-        <section id="about" class="about-section">
-            <h2 class="section-title">About me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I am an undergraduate Computer Science student with a strong interest in software development,
-                        robotics, and system design. I enjoy building practical solutions by combining programming,
-                        problem-solving, and engineering concepts.</p>
-                    <br>
-                    <p>
-                        Through academic and personal projects, I have gained hands-on experience in areas such as web
-                        development, embedded systems, and backend programming. I am always eager to learn new
-                        technologies, take on challenging problems, and continuously improve my skills while working on
-                        real-world applications.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects-section">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid" id="projectsContainer">
-                <!-- Projects will be loaded here from JSON -->
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <h2 class="section-title">Contact</h2>
-            <div class="contact-content">
-                <p>If you'd like to collaborate on a project, discuss ideas, or simply connect, feel free to reach out
-                    to me. I am always open to new opportunities, learning experiences, and meaningful conversations.
-                </p>
-                <div class="contact-info">
-                    <a href="mailto:Thilokyaangeesa@gmail.com" class="contact-link">Thilokyaangeesa@gmail.com</a>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/thilokya-angeesa-2867462b0" target="_blank"
-                            class="social-link">LinkedIn</a>
-                        <a href="https://github.com/Thilokya03" target="_blank" class="social-link">GitHub</a>
+        <main>
+            <section id="home" class="hero">
+                <div class="container hero-grid">
+                    <div class="hero-text">
+                        <!-- <span class="eyebrow">Portfolio Version 2.0</span> -->
+                        <h1>Hi, I'm Thilokya Angeesa</h1>
+                        <p class="hero-subtitle">CSE Undergraduate | Data Science Learner | Research Contributor</p>
+                        <p class="hero-description">
+                            I am an undergraduate in the Department of Computer Science and Engineering, Faculty of Engineering
+                            at the University of Moratuwa, interested in data science, machine learning, software development,
+                            and research-based problem solving.
+                        </p>
+                        <div class="cta-group">
+                            <a class="btn primary" href="#projects">View Projects</a>
+                            <a class="btn ghost" href="https://github.com/Thilokya03" target="_blank" rel="noopener">View GitHub</a>
+                            <a class="btn ghost" href="#contact">Contact Me</a>
+                        </div>
+                        <div class="hero-badges">
+                            <span>Data Analysis</span>
+                            <span>Machine Learning</span>
+                            <span>Research Writing</span>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="portrait-card">
+                            <img src="./assets/profilePhoto.png" alt="Portrait of Thilokya Angeesa">
+                            <div class="portrait-caption">
+                                <p>Faculty of Engineering</p>
+                                <p>University of Moratuwa</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </section>
+
+            <section id="about" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>About</h2>
+                        <p>Motivated by research, grounded in practical software development.</p>
+                    </div>
+                    <div class="split-card">
+                        <p>
+                            I am a University of Moratuwa undergraduate in the Department of Computer Science and Engineering,
+                            Faculty of Engineering, focused on data-centric problem solving. I enjoy turning messy datasets into
+                            clean, reliable inputs for analysis and modeling, and I value collaborative research workflows that
+                            produce reproducible results.
+                        </p>
+                        <p>
+                            My project experience spans web development, analytics, and research-driven exploration. I am
+                            always looking for opportunities to contribute to meaningful research, internships, and data science
+                            projects.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Skills</h2>
+                        <p>Core tools and methods I use for data work and research.</p>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <h3>Data Science</h3>
+                            <p>Python, Data Analysis, Machine Learning, Feature Engineering</p>
+                        </div>
+                        <div class="skill-card">
+                            <h3>Python Stack</h3>
+                            <p>Jupyter Notebook, Pandas, NumPy, Scikit-learn</p>
+                        </div>
+                        <div class="skill-card">
+                            <h3>Visualization</h3>
+                            <p>Matplotlib, Seaborn</p>
+                        </div>
+                        <div class="skill-card">
+                            <h3>Research Workflow</h3>
+                            <p>Data Preprocessing, Research Writing, Git, GitHub</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Projects</h2>
+                        <p>Selected academic and collaborative work.</p>
+                    </div>
+                    <div class="projects-grid" id="projectsContainer"></div>
+                </div>
+            </section>
+
+            <section id="research" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Research Highlight</h2>
+                        <p>Collaborative tea industry analytics and predictive workflow.</p>
+                    </div>
+                    <article class="research-card">
+                        <div class="research-header">
+                            <span class="badge">Research Project</span>
+                            <h3>Sri Lankan Tea Auction Price Analysis and Predictive Research Workflow</h3>
+                            <p class="research-type">Research | Data Science | Machine Learning | Collaborative Project</p>
+                        </div>
+                        <p class="research-summary">
+                            A collaborative research project focused on analyzing Sri Lankan tea auction price behavior
+                            using auction reports, production data, market segment information, and weather-related
+                            variables. The project builds a reproducible data pipeline to convert real-world
+                            semi-structured tea auction reports into clean analytical datasets for exploratory analysis
+                            and predictive modeling.
+                        </p>
+                        <p class="research-highlight">
+                            This project demonstrates my ability to transform real-world semi-structured data into
+                            research-ready datasets and apply data science methods to analyze commodity market behavior.
+                        </p>
+                        <div class="research-columns">
+                            <div>
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li>Tea auction PDF/report data processing</li>
+                                    <li>Data cleaning and preprocessing</li>
+                                    <li>Feature engineering and market segmentation</li>
+                                    <li>Exploratory data analysis</li>
+                                    <li>Baseline modeling preparation</li>
+                                    <li>Reproducible research workflow</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="research-footer">
+                            <div class="tag-row">
+                                <span>Python</span>
+                                <span>Pandas</span>
+                                <span>NumPy</span>
+                                <span>Scikit-learn</span>
+                                <span>Jupyter Notebook</span>
+                                <span>Matplotlib</span>
+                                <span>Seaborn</span>
+                                <span>GitHub</span>
+                            </div>
+                            <a class="btn primary" href="https://github.com/hesandism/data-analysis-for-tea-industry.git"
+                                target="_blank" rel="noopener">View Research on GitHub</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="education" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Education</h2>
+                        <p>Academic background and focus.</p>
+                    </div>
+                    <div class="education-card">
+                        <h3>Faculty of Engineering</h3>
+                        <p>University of Moratuwa</p>
+                        <p>Department of Computer Science and Engineering</p>
+                        <p>Focus: Data Science, Machine Learning, Robotics</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Contact</h2>
+                        <p>Open to internships, research opportunities, and collaborations.</p>
+                    </div>
+                    <div class="contact-card">
+                        <div>
+                            <h3>Let's Connect</h3>
+                            <p>If you would like to discuss a project or research idea, feel free to reach out.</p>
+                        </div>
+                        <div class="contact-links">
+                            <a class="contact-link" href="mailto:Thilokyaangeesa@gmail.com">Thilokyaangeesa@gmail.com</a>
+                            <a class="contact-link" href="https://www.linkedin.com/in/thilokya-angeesa-2867462b0" target="_blank"
+                                rel="noopener">LinkedIn</a>
+                            <a class="contact-link" href="https://github.com/Thilokya03" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="github" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>GitHub</h2>
+                        <p>Repositories and collaborative work.</p>
+                    </div>
+                    <div class="github-grid">
+                        <a class="github-card" href="https://github.com/Thilokya03" target="_blank" rel="noopener">
+                            <h3>GitHub Profile</h3>
+                            <p>Explore my latest projects and research notebooks.</p>
+                        </a>
+                        <a class="github-card" href="https://github.com/hesandism/data-analysis-for-tea-industry.git" target="_blank"
+                            rel="noopener">
+                            <h3>Tea Auction Research</h3>
+                            <p>Collaborative data science workflow and analysis pipeline.</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>Portfolio Version 2.0 • Thilokya Angeesa</p>
             </div>
-        </section>
-
-    </div>
-</body>
-
+        </footer>
+    </body>
 </html>

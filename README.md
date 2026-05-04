@@ -1,23 +1,23 @@
 # Thilokya Angeesa - Portfolio Website
 
-A modern, interactive portfolio website showcasing projects, skills, and professional experience with a beautiful starfield background and smooth animations.
+A modern, responsive portfolio website showcasing projects, research, skills, and academic background with clean visuals and smooth section reveals.
 
 ## ✨ Features
 
-- **Interactive Hero Section** - Eye-catching landing area with profile image and smooth scrolling
-- **Dynamic Project Showcase** - Projects loaded from JSON with category filtering
-- **Tech Stack Display** - Full-width tech badges showing all skills and tools
-- **Cursor Tracking Stars** - Animated starfield background that responds to cursor movement
-- **Smooth Navigation** - Seamless scroll navigation between sections
-- **Responsive Design** - Fully responsive layout for mobile, tablet, and desktop
-- **Modern Glassmorphism** - Glass effect styling with backdrop blur and subtle borders
+- **Hero Section** - Clear headline, academic identity, and calls to action
+- **Research Highlight** - Dedicated section for the tea auction project
+- **Dynamic Project Showcase** - Projects loaded from JSON
+- **Skills + Education** - Structured academic and technical summary
+- **Smooth Navigation** - Sticky header with anchored sections
+- **Responsive Design** - Mobile, tablet, and desktop layouts
+- **Subtle Animations** - Scroll reveal for section content
 
 ## 🛠️ Tech Stack
 
 - **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
-- **Styling**: Modern CSS with glassmorphism effects
+- **Styling**: Modern CSS with custom properties
 - **Data**: JSON for dynamic project management
-- **Animations**: CSS keyframes and JavaScript-driven effects
+- **Animations**: IntersectionObserver-based reveals
 
 ## 📁 Project Structure
 
@@ -41,17 +41,18 @@ Projects are managed in `assets/projects.json`. Each project includes:
 {
   "id": 1,
   "title": "Project Name",
-  "category": "Category Name",
+  "type": "Category | Focus",
   "description": "Brief description",
-  "technologies": ["Tech1", "Tech2"],
   "github": "https://github.com/...",
-  "image": "./assets/project1.jpg"
+  "image": "./assets/photos/project1.jpg",
+  "badge": "Research Project",
+  "tags": ["Python", "Pandas"]
 }
 ```
 
 ### Adding New Projects
 
-Edit `assets/projects.json` and add a new object to the projects array. Projects will automatically appear on the portfolio with filtering by category.
+Edit `assets/projects.json` and add a new object to the projects array. Projects will automatically appear on the portfolio.
 
 ## 🎨 Customization
 
@@ -59,24 +60,24 @@ Edit `assets/projects.json` and add a new object to the projects array. Projects
 Edit the CSS variables in `style.css`:
 ```css
 :root {
-  --bg-dark: #0b1c26;
-  --bg-light: #102a3c;
-  --accent: #ff6b4a;
-  --text-main: #ffffff;
-  --text-muted: #b0c4d4;
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --ink: #1b1f24;
+  --muted: #4f5b66;
+  --accent: #1c7c8c;
+  --accent-soft: #e3f2f4;
 }
 ```
 
 ### Hero Text
-Update the main hero section in `index.html`:
+Update the hero content in `index.html`:
 ```html
-<h2>Hello</h2>
-<h2>I'm Thilokya Angeesa</h2>
-<h2>Software Developer</h2>
+<h1>Hi, I'm Thilokya Angeesa</h1>
+<p class="hero-subtitle">CSE Undergraduate | Data Science Learner | Research Contributor</p>
 ```
 
-### Tech Stack
-Add/remove tech badges in the `.tech-stack` section in `index.html`.
+### Project Images
+Project card images are read from `assets/projects.json` and shown in a 16:9 frame.
 
 ## 📱 Responsive Breakpoints
 
@@ -86,21 +87,11 @@ Add/remove tech badges in the `.tech-stack` section in `index.html`.
 
 ## ⚙️ Features Explained
 
-### Cursor Tracking Stars
-- 200 static background stars with twinkling animation
-- Stars move based on time using `requestAnimationFrame`
-- 50 dynamic stars created on cursor movement
-- Smooth fade-out animation for interactive stars
-
-### Project Filtering
-- Categories automatically generated from JSON data
-- Click filter buttons to show projects by category
-- Smooth transitions between filtered views
+### Scroll Reveal
+- Sections and project cards reveal on scroll with IntersectionObserver
 
 ### Smooth Scroll Navigation
-- Click navigation links for smooth page scrolling
-- Home link scrolls to top with smooth behavior
-- All anchor links scroll to section with smooth effect
+- Anchor links scroll to sections using native smooth behavior
 
 ## 🔧 Browser Support
 
@@ -125,4 +116,4 @@ This portfolio website is designed to showcase professional work, skills, and pr
 
 ---
 
-**Last Updated**: December 2025
+**Last Updated**: May 2026

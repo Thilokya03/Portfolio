@@ -1,166 +1,174 @@
-/* =============================================
-   STARS BACKGROUND EFFECT
-   ============================================= */
+const navToggle = document.getElementById('navToggle');
+const siteNav = document.getElementById('siteNav');
 
-const starsContainer = document.querySelector('.stars-container');
-let stars = [];
-let backgroundStars = [];
-let startTime = Date.now();
+if (navToggle && siteNav) {
+  navToggle.addEventListener('click', () => {
+    siteNav.classList.toggle('is-open');
+  });
+}
 
-// -------- Create Background Stars --------
-function createBackgroundStars() {
-  for (let i = 0; i < 500; i++) {
-    const star = document.createElement('div');
-    star.className = 'star';
-    
-    const size = Math.random() * 5 + 1;
-    const initialX = Math.random() * 100;
-    const initialY = Math.random() * 100;
-    const speed = Math.random() * 0.02 + 0.01; // Speed of movement
-    const angle = Math.random() * Math.PI * 2; // Random direction
-    
-    star.style.width = `${size}px`;
-    star.style.height = `${size}px`;
-    star.style.left = `${initialX}%`;
-    star.style.top = `${initialY}%`;
-    star.style.animationDuration = `${Math.random() * 2 + 2}s`;
-    star.style.animationDelay = `${Math.random() * 1}s`;
-    
-    starsContainer.appendChild(star);
-    
-    // Store star data for time-based movement
-    backgroundStars.push({
-      element: star,
-      initialX: initialX,
-      initialY: initialY,
-      speed: speed,
-      angle: angle,
-      size: size
-    });
+const fallbackProjects = [
+  {
+    id: 1,
+    title: 'Sri Lankan Tea Auction Price Analysis and Predictive Research Workflow',
+    type: 'Research | Data Science | Machine Learning',
+    description:
+      'A research-based data science project that analyzes Sri Lankan tea auction price behavior using real-world auction, production, weather, and market segment data. The project focuses on preprocessing, feature engineering, exploratory analysis, and preparation for predictive modeling.',
+    github: 'https://github.com/hesandism/data-analysis-for-tea-industry.git',
+    image: '',
+    badge: 'Research Project',
+    tags: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Jupyter Notebook']
+  },
+  {
+    id: 2,
+    title: 'Micro Mouse Robot',
+    type: 'Robotics | Embedded Systems',
+    description:
+      'A maze-solving autonomous robot designed with sensor-based navigation and real-time path planning for efficient traversal.',
+    github: '',
+    image: './assets/photos/project3.jpg',
+    tags: ['Robotics', 'Embedded']
+  },
+  {
+    id: 3,
+    title: 'Clinic Appointment System',
+    type: 'Web Application | Database',
+    description:
+      'A web-based clinic appointment and patient management system supporting role-based access and streamlined workflows.',
+    github: 'https://github.com/Thilokya03/Clinic-Appointment-and-Treatment-Management-System.git',
+    image: './assets/photos/CATMS.jpg',
+    tags: ['Web', 'Backend']
+  },
+  {
+    id: 4,
+    title: '4-bit Nano Processor',
+    type: 'Digital Logic | Architecture',
+    description:
+      'A custom-designed 4-bit processor implementing instruction execution, ALU operations, and control logic.',
+    github: 'https://github.com/adLahiru/Nano_Processor_v1.git',
+    image: './assets/photos/nanoprocessor.png',
+    tags: ['Digital Logic', 'Architecture']
+  },
+  {
+    id: 5,
+    title: 'Life Line',
+    type: 'Healthcare | Database',
+    description:
+      'A healthcare system to manage blood banks and donor requests with efficient data handling.',
+    github: 'https://github.com/nadilHesara/LifeLine.git',
+    image: './assets/photos/BBMS.png',
+    tags: ['Backend', 'Database']
+  },
+  {
+    id: 6,
+    title: 'Autonomous Potato Sorting Robot | SLRC 2025',
+    type: 'Computer Vision | Automation',
+    description:
+      'A robotic system that classifies and sorts potatoes using image processing and mechanical automation.',
+    github: 'https://github.com/AkhilaNisal/SLRC-2025.git',
+    image: './assets/photos/SLRC 2025.jpg',
+    tags: ['Computer Vision', 'Robotics']
   }
-}
+];
 
-// -------- Update Star Positions Based on Time --------
-function updateStarPositions() {
-  const currentTime = (Date.now() - startTime) / 1000; // Time in seconds
-  
-  backgroundStars.forEach(star => {
-    // Calculate new position based on time
-    const offsetX = Math.cos(star.angle) * star.speed * currentTime * 20;
-    const offsetY = Math.sin(star.angle) * star.speed * currentTime * 20;
-    
-    const newX = (star.initialX + offsetX) % 100;
-    const newY = (star.initialY + offsetY) % 100;
-    
-    star.element.style.left = `${newX}%`;
-    star.element.style.top = `${newY}%`;
-  });
-  
-  requestAnimationFrame(updateStarPositions);
-}
-
-// Initialize background stars on page load
-createBackgroundStars();
-updateStarPositions();
-
-/* =============================================
-   SMOOTH SCROLL NAVIGATION
-   ============================================= */
-
-// -------- Navigation Link Smooth Scroll --------
-document.querySelectorAll('.navibar ul li a').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const targetId = link.getAttribute('href');
-    
-    if (targetId === '#home') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      const targetSection = document.querySelector(targetId);
-      if (targetSection) {
-        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-  });
-});
-
-/* =============================================
-   PROJECTS LOADER
-   ============================================= */
-
-// -------- Load Projects from JSON --------
 async function loadProjects() {
   try {
     const response = await fetch('./assets/projects.json');
+    if (!response.ok) {
+      throw new Error(`Failed to load projects.json: ${response.status}`);
+    }
     const data = await response.json();
     displayProjects(data.projects);
-    createCategoryFilters(data.projects);
   } catch (error) {
     console.error('Error loading projects:', error);
+    displayProjects(fallbackProjects);
   }
 }
 
-// -------- Display Projects --------
-function displayProjects(projects, filter = 'all') {
-  const container = document.getElementById('projectsContainer');
-  container.innerHTML = '';
-  
-  const filteredProjects = filter === 'all' 
-    ? projects 
-    : projects.filter(p => p.category === filter);
-  
-  filteredProjects.forEach(project => {
-    const projectCard = document.createElement('div');
-    projectCard.className = 'project-card';
-    projectCard.innerHTML = `
-      <div class="project-image">
+function createProjectMedia(project) {
+  if (project.image) {
+    return `
+      <div class="project-media">
         <img src="${project.image}" alt="${project.title}">
       </div>
-      <div class="project-info">
+    `;
+  }
+
+  const initials = project.title
+    .replace(/[^A-Za-z ]/g, '')
+    .split(' ')
+    .filter(Boolean)
+    .slice(0, 2)
+    .map(word => word[0])
+    .join('')
+    .toUpperCase();
+
+  return `
+    <div class="project-media">
+      <span class="project-initials">${initials}</span>
+    </div>
+  `;
+}
+
+let revealObserver = null;
+
+function displayProjects(projects) {
+  const container = document.getElementById('projectsContainer');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  projects.forEach(project => {
+    const projectCard = document.createElement('article');
+    projectCard.className = 'project-card reveal';
+
+    const tags = project.tags
+      ? project.tags.map(tag => `<span>${tag}</span>`).join('')
+      : '';
+
+    const badge = project.badge
+      ? `<span class="badge">${project.badge}</span>`
+      : '';
+
+    projectCard.innerHTML = `
+      ${createProjectMedia(project)}
+      <div class="project-body">
+        ${badge}
+        <p class="project-type">${project.type}</p>
         <h3>${project.title}</h3>
-        <p>${project.description}</p>
-        <div class="project-links">
-          <a href="${project.github}" target="_blank" class="project-link">GitHub</a>
-        </div>
+        <p class="project-desc">${project.description}</p>
+        <div class="project-tags">${tags}</div>
+      </div>
+      <div class="project-footer">
+        <a href="${project.github}" target="_blank" rel="noopener">View on GitHub</a>
       </div>
     `;
+
     container.appendChild(projectCard);
+    if (revealObserver) {
+      revealObserver.observe(projectCard);
+    } else {
+      projectCard.classList.add('is-visible');
+    }
   });
 }
 
-// -------- Create Category Filters --------
-function createCategoryFilters(projects) {
-  const filterContainer = document.querySelector('.project-filters');
-  const categories = ['all', ...new Set(projects.map(p => p.category))];
-  
-  filterContainer.innerHTML = '';
-  
-  categories.forEach(category => {
-    const btn = document.createElement('button');
-    btn.className = `filter-btn ${category === 'all' ? 'active' : ''}`;
-    btn.textContent = category.charAt(0).toUpperCase() + category.slice(1);
-    btn.setAttribute('data-filter', category);
-    
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      loadProjectsWithFilter(category);
+function initRevealAnimations() {
+  const elements = document.querySelectorAll('.section, .project-card, .hero-text, .hero-visual');
+  elements.forEach(el => el.classList.add('reveal'));
+
+  revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
     });
-    
-    filterContainer.appendChild(btn);
-  });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => revealObserver.observe(el));
 }
 
-// -------- Load Projects with Filter --------
-async function loadProjectsWithFilter(filter) {
-  try {
-    const response = await fetch('./assets/projects.json');
-    const data = await response.json();
-    displayProjects(data.projects, filter);
-  } catch (error) {
-    console.error('Error loading projects:', error);
-  }
-}
-
-// Initialize projects on page load
-document.addEventListener('DOMContentLoaded', loadProjects);
+document.addEventListener('DOMContentLoaded', () => {
+  loadProjects();
+  initRevealAnimations();
+});

@@ -2,42 +2,79 @@
     "projects": [
         {
             "id": 1,
-            "title": "🧩 Micro Mouse Robot",
-            "description": "A maze-solving autonomous robot designed using embedded systems and sensor-based navigation. The robot detects walls, plans an optimal path, and navigates through a maze efficiently using real-time decision making and control algorithms. This project focuses on robotics, path-finding logic, and hardware–software integration.",
-            "github": " ",
-            "image": "./assets/photos/project3.jpg"
+            "title": "Sri Lankan Tea Auction Price Analysis and Predictive Research Workflow",
+            "type": "Research | Data Science | Machine Learning",
+            "description": "A research-based data science project that analyzes Sri Lankan tea auction price behavior using real-world auction, production, weather, and market segment data. The project focuses on preprocessing, feature engineering, exploratory analysis, and preparation for predictive modeling.",
+            "github": "https://github.com/hesandism/data-analysis-for-tea-industry.git",
+            "image": "",
+            "badge": "Research Project",
+            "tags": [
+                "Python",
+                "Pandas",
+                "NumPy",
+                "Scikit-learn",
+                "Jupyter Notebook"
+            ]
         },
         {
             "id": 2,
-            "title": "📋 Clinic Appointment System",
-            "description": "A web-based clinic appointment and patient management system developed to streamline appointment booking, treatment records, and clinic operations. The system supports role-based access for doctors, nurses, and staff, ensuring secure data handling and efficient workflow management using database-driven backend logic.",
-            "github": "https://github.com/Thilokya03/Clinic-Appointment-and-Treatment-Management-System.git",
-            "image": "./assets/photos/CATMS.jpg"
+            "title": "Micro Mouse Robot",
+            "type": "Robotics | Embedded Systems",
+            "description": "A maze-solving autonomous robot designed with sensor-based navigation and real-time path planning for efficient traversal.",
+            "github": "",
+            "image": "./assets/photos/project3.jpg",
+            "tags": [
+                "Robotics",
+                "Embedded"
+            ]
         },
         {
             "id": 3,
-            "title": "🔲 4-bit Nano Processor",
-            "description": "A custom-designed 4-bit nano processor implementing core computer architecture concepts such as instruction execution, program counter, ALU operations, and control logic. The processor was designed and simulated using hardware description techniques, demonstrating a strong understanding of digital logic and processor design fundamentals.",
-            "github": "https://github.com/adLahiru/Nano_Processor_v1.git",
-            "image": "./assets/photos/nanoprocessor.png "
+            "title": "Clinic Appointment System",
+            "type": "Web Application | Database",
+            "description": "A web-based clinic appointment and patient management system supporting role-based access and streamlined workflows.",
+            "github": "https://github.com/Thilokya03/Clinic-Appointment-and-Treatment-Management-System.git",
+            "image": "./assets/photos/CATMS.jpg",
+            "tags": [
+                "Web",
+                "Backend"
+            ]
         },
         {
             "id": 4,
-            "title": "🔲 Life Line",
-            "description": "A healthcare-oriented software system designed to manage blood banks and medical resources efficiently. The application enables tracking of donors, blood availability, and requests, improving response time and data accessibility. The project emphasizes backend development, database integration, and real-world problem solving in healthcare systems.",
-            "github": "https://github.com/nadilHesara/LifeLine.git",
-            "image": "./assets/photos/BBMS.png "
+            "title": "4-bit Nano Processor",
+            "type": "Digital Logic | Architecture",
+            "description": "A custom-designed 4-bit processor implementing instruction execution, ALU operations, and control logic.",
+            "github": "https://github.com/adLahiru/Nano_Processor_v1.git",
+            "image": "./assets/photos/nanoprocessor.png",
+            "tags": [
+                "Digital Logic",
+                "Architecture"
+            ]
         },
         {
             "id": 5,
-            "title": "🥔 Autonomous Potato Sorting Robot | SLRC - 2025",
-            "description": "A robotic system developed for sorting potatoes based on size and quality using computer vision and mechanical sorting mechanisms. The robot utilizes image processing algorithms to classify potatoes and automate the sorting process, enhancing efficiency in agricultural operations. This project highlights skills in robotics, image analysis, and automation.",
+            "title": "Life Line",
+            "type": "Healthcare | Database",
+            "description": "A healthcare system to manage blood banks and donor requests with efficient data handling.",
+            "github": "https://github.com/nadilHesara/LifeLine.git",
+            "image": "./assets/photos/BBMS.png",
+            "tags": [
+                "Backend",
+                "Database"
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Autonomous Potato Sorting Robot | SLRC 2025",
+            "type": "Computer Vision | Automation",
+            "description": "A robotic system that classifies and sorts potatoes using image processing and mechanical automation.",
             "github": "https://github.com/AkhilaNisal/SLRC-2025.git",
-            "image": "./assets/photos/SLRC 2025.jpg"
+            "image": "./assets/photos/SLRC 2025.jpg",
+            "tags": [
+                "Computer Vision",
+                "Robotics"
+            ]
         }
-    ],
-
-    "cirtification":[
-
     ]
 }
