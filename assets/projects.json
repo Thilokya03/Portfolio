@@ -1,80 +1,171 @@
 {
-    "projects": [
-        {
-            "id": 1,
-            "title": "Sri Lankan Tea Auction Price Analysis and Predictive Research Workflow",
-            "type": "Research | Data Science | Machine Learning",
-            "description": "A research-based data science project that analyzes Sri Lankan tea auction price behavior using real-world auction, production, weather, and market segment data. The project focuses on preprocessing, feature engineering, exploratory analysis, and preparation for predictive modeling.",
-            "github": "https://github.com/hesandism/data-analysis-for-tea-industry.git",
-            "image": "",
-            "badge": "Research Project",
-            "tags": [
-                "Python",
-                "Pandas",
-                "NumPy",
-                "Scikit-learn",
-                "Jupyter Notebook"
-            ]
-        },
-        {
-            "id": 2,
-            "title": "Micro Mouse Robot",
-            "type": "Robotics | Embedded Systems",
-            "description": "A maze-solving autonomous robot designed with sensor-based navigation and real-time path planning for efficient traversal.",
-            "github": "",
-            "image": "./assets/photos/project3.jpg",
-            "tags": [
-                "Robotics",
-                "Embedded"
-            ]
-        },
-        {
-            "id": 3,
-            "title": "Clinic Appointment System",
-            "type": "Web Application | Database",
-            "description": "A web-based clinic appointment and patient management system supporting role-based access and streamlined workflows.",
-            "github": "https://github.com/Thilokya03/Clinic-Appointment-and-Treatment-Management-System.git",
-            "image": "./assets/photos/CATMS.jpg",
-            "tags": [
-                "Web",
-                "Backend"
-            ]
-        },
-        {
-            "id": 4,
-            "title": "4-bit Nano Processor",
-            "type": "Digital Logic | Architecture",
-            "description": "A custom-designed 4-bit processor implementing instruction execution, ALU operations, and control logic.",
-            "github": "https://github.com/adLahiru/Nano_Processor_v1.git",
-            "image": "./assets/photos/nanoprocessor.png",
-            "tags": [
-                "Digital Logic",
-                "Architecture"
-            ]
-        },
-        {
-            "id": 5,
-            "title": "Life Line",
-            "type": "Healthcare | Database",
-            "description": "A healthcare system to manage blood banks and donor requests with efficient data handling.",
-            "github": "https://github.com/nadilHesara/LifeLine.git",
-            "image": "./assets/photos/BBMS.png",
-            "tags": [
-                "Backend",
-                "Database"
-            ]
-        },
-        {
-            "id": 6,
-            "title": "Autonomous Potato Sorting Robot | SLRC 2025",
-            "type": "Computer Vision | Automation",
-            "description": "A robotic system that classifies and sorts potatoes using image processing and mechanical automation.",
-            "github": "https://github.com/AkhilaNisal/SLRC-2025.git",
-            "image": "./assets/photos/SLRC 2025.jpg",
-            "tags": [
-                "Computer Vision",
-                "Robotics"
-            ]
-        }
-    ]
+  "projects": [
+    {
+      "id": 1,
+      "title": "Forecasting Weather-Driven Price Dynamics Across Sri Lankan Tea Market Catalogues",
+      "type": "Research | Data Science | Machine Learning",
+      "description": "A research project investigating weather-driven and market-related factors affecting Sri Lankan tea auction prices. The workflow extracts structured data from weekly reports, integrates historical weather information, performs time-aware feature engineering and causality analysis, and evaluates machine learning models for pooled and catalogue-specific price forecasting.",
+      "github": "https://github.com/hesandism/data-analysis-for-tea-industry.git",
+      "image": "assets\\photos\\tea_research.jpg",
+      "badge": "Research Project",
+      "tags": [
+        "Python",
+        "Pandas",
+        "LightGBM",
+        "XGBoost",
+        "Time Series"
+      ]
+    },
+
+    {
+      "id": 2,
+      "title": "Autonomous Mobile Manipulation Robot | SLRC 2026",
+      "type": "Robotics | Computer Vision | Autonomous Systems",
+      "description": "A fully autonomous mobile manipulation robot developed for the Sri Lanka Robotics Challenge 2026. The system integrates autonomous navigation, computer vision, AprilTag detection, sensor fusion, path tracking, and a 5-DOF robotic arm with motion planning for coordinated pick-and-place tasks.",
+      "github": "https://github.com/AkhilaNisal/SLRC-2026.git",
+      "image": "assets\\photos\\SLRC-2026.jpeg",
+      "badge": "SLRC 2026",
+      "tags": [
+        "ROS 2",
+        "OpenCV",
+        "MoveIt 2",
+        "Python",
+        "C++"
+      ]
+    },
+
+    {
+      "id": 3,
+      "title": "Micro Mouse Robot",
+      "type": "Robotics | Embedded Systems | Path Planning",
+      "description": "An autonomous maze-solving robot designed to navigate and explore maze environments using sensor-based perception, embedded control, and real-time path-planning techniques for efficient traversal.",
+      "github": "",
+      "image": "./assets/photos/project3.jpg",
+      "badge": "Robotics Project",
+      "tags": [
+        "Robotics",
+        "Embedded Systems",
+        "Sensors",
+        "Path Planning"
+      ]
+    },
+
+    {
+      "id": 4,
+      "title": "Clinic Appointment and Treatment Management System",
+      "type": "Web Development | Healthcare",
+      "description": "A healthcare-focused web application designed to streamline clinic appointment and treatment management through a user-friendly interface and organized digital workflows for managing patient-related activities.",
+      "github": "https://github.com/Thilokya03/Clinic-Appointment-and-Treatment-Management-System.git",
+      "image": "assets\\photos\\CATMS.jpg",
+      "badge": "Web Application",
+      "tags": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Web Development"
+      ]
+    },
+
+    {
+      "id": 5,
+      "title": "4-bit Nano Processor",
+      "type": "Computer Architecture | Digital Logic | FPGA",
+      "description": "A custom 4-bit nano processor implemented in VHDL to demonstrate fundamental CPU architecture concepts. The processor integrates a register bank, ALU, instruction decoder, clock generator, and control logic while supporting arithmetic, data movement, negation, and conditional jump instructions.",
+      "github": "https://github.com/adLahiru/Nano_Processor_v1.git",
+      "image": "./assets/photos/nanoprocessor.png",
+      "badge": "Hardware Project",
+      "tags": [
+        "VHDL",
+        "FPGA",
+        "Digital Logic",
+        "Computer Architecture",
+        "Vivado"
+      ]
+    },
+
+    {
+      "id": 6,
+      "title": "LifeLine | Blood Bank Management System",
+      "type": "Full-Stack Development | Healthcare",
+      "description": "A full-stack blood bank management platform connecting donors, hospitals, and administrators. The system supports donation campaigns, blood inventory monitoring, hospital blood requests, role-based user management, authentication, and real-time coordination of blood-bank operations.",
+      "github": "https://github.com/nadilHesara/LifeLine.git",
+      "image": "./assets/photos/BBMS.png",
+      "badge": "Full-Stack Project",
+      "tags": [
+        "React",
+        "Ballerina",
+        "MySQL",
+        "REST API",
+        "JWT"
+      ]
+    },
+
+    {
+      "id": 7,
+      "title": "Autonomous Potato Sorting Robot | SLRC 2025",
+      "type": "Robotics | Computer Vision | Automation",
+      "description": "An autonomous agricultural robot developed for SLRC 2025 that navigates a grid-like environment, detects and classifies potatoes using computer vision, collects them with a robotic gripper, and sorts good and defective potatoes into separate compartments.",
+      "github": "https://github.com/AkhilaNisal/SLRC-2025.git",
+      "image": "assets\\photos\\SLRC 2025.jpg",
+      "badge": "SLRC 2025",
+      "tags": [
+        "Python",
+        "OpenCV",
+        "Raspberry Pi",
+        "Arduino",
+        "PID Control"
+      ]
+    },
+
+    {
+      "id": 8,
+      "title": "Sri Lanka Holiday Dataset",
+      "type": "Data Engineering | Dataset | Automation",
+      "description": "A structured Sri Lankan calendar and holiday dataset created by collecting, cleaning, validating, and integrating holiday information from public sources. The project combines automated data extraction and processing workflows to produce analysis-ready calendar features for downstream data science and forecasting applications.",
+      "github": "https://github.com/Thilokya03/Sri-Lanka-Holiday-Dataset",
+      "image": "assets\\photos\\Sri_Lanka_Holiday_Dataset.png",
+      "badge": "Data Engineering Project",
+      "tags": [
+        "Python",
+        "Pandas",
+        "Web Scraping",
+        "Data Engineering",
+        "GitHub Actions"
+      ]
+    },
+
+    {
+      "id": 9,
+      "title": "Automated Glaucoma Screening System",
+      "type": "Deep Learning | Computer Vision | Healthcare AI",
+      "description": "An AI-based glaucoma screening system that analyzes retinal fundus images using deep learning and machine learning. The pipeline combines optic disc and cup segmentation, image-based feature extraction, and predictive models to estimate glaucoma risk from retinal imagery.",
+      "github": "https://github.com/Thilokya03/Eye_Clinic",
+      "image": "assets\\photos\\glaucoma-detection.webp",
+      "badge": "AI/ML Project",
+      "tags": [
+        "PyTorch",
+        "U-Net",
+        "XGBoost",
+        "Computer Vision",
+        "Deep Learning"
+      ]
+    },
+
+    {
+      "id": 10,
+      "title": "Point of Sale (POS) System",
+      "type": "Java | Object-Oriented Programming",
+      "description": "A Java-based Point of Sale application designed to manage cashier operations, products, billing, discounts, payments, and sales transactions. The project applies object-oriented programming principles and persistent CSV-based data handling through an interactive command-line interface.",
+      "github": "https://github.com/Thilokya03/POS-System.git",
+      "image": "./assets/photos/pos-system.jpg",
+      "badge": "Java Project",
+      "tags": [
+        "Java",
+        "OOP",
+        "CSV",
+        "File Handling",
+        "CLI"
+      ]
+    }
+  ]
 }
