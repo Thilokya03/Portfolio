@@ -1,252 +1,708 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Thilokya Angeesa | Portfolio</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-    </head>
-    <body>
-        <div class="background">
-            <div class="orb orb-one"></div>
-            <div class="orb orb-two"></div>
-            <div class="grid-overlay"></div>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <header class="site-header">
-            <div class="container header-inner">
-                <a class="brand" href="#home">Thilokya Angeesa</a>
-                <nav class="nav" id="siteNav">
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#research">Research</a>
-                    <a href="#education">Education</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#github">GitHub</a>
-                </nav>
-                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+    <title>Thilokya Angeesa | Portfolio v3.0</title>
+
+    <meta
+        name="description"
+        content="Portfolio of Thilokya Angeesa, a Computer Science and Engineering undergraduate at the University of Moratuwa with interests in machine learning, data science, software engineering, robotics, and research."
+    >
+    <meta name="author" content="Thilokya Angeesa">
+    <meta
+        name="keywords"
+        content="Thilokya Angeesa, University of Moratuwa, Computer Science, Machine Learning, Data Science, Software Engineering, Robotics, Research, Portfolio"
+    >
+
+    <meta property="og:title" content="Thilokya Angeesa | Portfolio v3.0">
+    <meta
+        property="og:description"
+        content="Computer Science and Engineering undergraduate portfolio featuring research, published datasets, machine learning, software engineering, robotics, and data projects."
+    >
+    <meta property="og:type" content="website">
+
+    <script>
+        (() => {
+            try {
+                const savedTheme = localStorage.getItem('portfolio-theme');
+                const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+                    ? 'dark'
+                    : 'light';
+
+                document.documentElement.dataset.theme =
+                    savedTheme === 'light' || savedTheme === 'dark'
+                        ? savedTheme
+                        : systemTheme;
+            } catch {
+                document.documentElement.dataset.theme = 'light';
+            }
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+    <div class="background" aria-hidden="true">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+
+    <!-- =====================================================
+         HEADER / NAVIGATION
+    ====================================================== -->
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a class="brand" href="#home">
+                Thilokya Angeesa
+            </a>
+
+            <nav class="nav" id="siteNav" aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#research">Research & Publications</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Switch to dark theme"
+                    title="Switch to dark theme"
+                >
+                    <span class="theme-icon" aria-hidden="true">☾</span>
+                </button>
+
+                <button
+                    class="nav-toggle"
+                    id="navToggle"
+                    type="button"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                    aria-controls="siteNav"
+                >
                     <span></span>
                     <span></span>
                 </button>
             </div>
-        </header>
 
-        <main>
-            <section id="home" class="hero">
-                <div class="container hero-grid">
-                    <div class="hero-text">
-                        <!-- <span class="eyebrow">Portfolio Version 2.0</span> -->
-                        <h1>Hi, I'm Thilokya Angeesa</h1>
-                        <p class="hero-subtitle">CSE Undergraduate | Data Science Learner | Research Contributor</p>
-                        <p class="hero-description">
-                            I am an undergraduate in the Department of Computer Science and Engineering, Faculty of Engineering
-                            at the University of Moratuwa, interested in data science, machine learning, software development,
-                            and research-based problem solving.
-                        </p>
-                        <div class="cta-group">
-                            <a class="btn primary" href="#projects">View Projects</a>
-                            <a class="btn ghost" href="https://github.com/Thilokya03" target="_blank" rel="noopener">View GitHub</a>
-                            <a class="btn ghost" href="#contact">Contact Me</a>
-                        </div>
-                        <div class="hero-badges">
-                            <span>Data Analysis</span>
-                            <span>Machine Learning</span>
-                            <span>Research Writing</span>
-                        </div>
-                    </div>
-                    <div class="hero-visual">
-                        <div class="portrait-card">
-                            <img src="./assets/profilePhoto.png" alt="Portrait of Thilokya Angeesa">
-                            <div class="portrait-caption">
-                                <p>Faculty of Engineering</p>
-                                <p>University of Moratuwa</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        </div>
+    </header>
 
-            <section id="about" class="section">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>About</h2>
-                        <p>Motivated by research, grounded in practical software development.</p>
-                    </div>
-                    <div class="split-card">
-                        <p>
-                            I am a University of Moratuwa undergraduate in the Department of Computer Science and Engineering,
-                            Faculty of Engineering, focused on data-centric problem solving. I enjoy turning messy datasets into
-                            clean, reliable inputs for analysis and modeling, and I value collaborative research workflows that
-                            produce reproducible results.
-                        </p>
-                        <p>
-                            My project experience spans web development, analytics, and research-driven exploration. I am
-                            always looking for opportunities to contribute to meaningful research, internships, and data science
-                            projects.
-                        </p>
-                    </div>
-                </div>
-            </section>
 
-            <section id="skills" class="section">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>Skills</h2>
-                        <p>Core tools and methods I use for data work and research.</p>
-                    </div>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <h3>Data Science</h3>
-                            <p>Python, Data Analysis, Machine Learning, Feature Engineering</p>
-                        </div>
-                        <div class="skill-card">
-                            <h3>Python Stack</h3>
-                            <p>Jupyter Notebook, Pandas, NumPy, Scikit-learn</p>
-                        </div>
-                        <div class="skill-card">
-                            <h3>Visualization</h3>
-                            <p>Matplotlib, Seaborn</p>
-                        </div>
-                        <div class="skill-card">
-                            <h3>Research Workflow</h3>
-                            <p>Data Preprocessing, Research Writing, Git, GitHub</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <main>
 
-            <section id="projects" class="section">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>Projects</h2>
-                        <p>Selected academic and collaborative work.</p>
-                    </div>
-                    <div class="projects-grid" id="projectsContainer"></div>
-                </div>
-            </section>
+        <!-- =================================================
+             HERO
+        ================================================== -->
+        <section id="home" class="hero">
+            <div class="container hero-grid">
 
-            <section id="research" class="section">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>Research Highlight</h2>
-                        <p>Collaborative tea industry analytics and predictive workflow.</p>
-                    </div>
-                    <article class="research-card">
-                        <div class="research-header">
-                            <span class="badge">Research Project</span>
-                            <h3>Sri Lankan Tea Auction Price Analysis and Predictive Research Workflow</h3>
-                            <p class="research-type">Research | Data Science | Machine Learning | Collaborative Project</p>
-                        </div>
-                        <p class="research-summary">
-                            A collaborative research project focused on analyzing Sri Lankan tea auction price behavior
-                            using auction reports, production data, market segment information, and weather-related
-                            variables. The project builds a reproducible data pipeline to convert real-world
-                            semi-structured tea auction reports into clean analytical datasets for exploratory analysis
-                            and predictive modeling.
-                        </p>
-                        <p class="research-highlight">
-                            This project demonstrates my ability to transform real-world semi-structured data into
-                            research-ready datasets and apply data science methods to analyze commodity market behavior.
-                        </p>
-                        <div class="research-columns">
-                            <div>
-                                <h4>Key Features</h4>
-                                <ul>
-                                    <li>Tea auction PDF/report data processing</li>
-                                    <li>Data cleaning and preprocessing</li>
-                                    <li>Feature engineering and market segmentation</li>
-                                    <li>Exploratory data analysis</li>
-                                    <li>Baseline modeling preparation</li>
-                                    <li>Reproducible research workflow</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="research-footer">
-                            <div class="tag-row">
-                                <span>Python</span>
-                                <span>Pandas</span>
-                                <span>NumPy</span>
-                                <span>Scikit-learn</span>
-                                <span>Jupyter Notebook</span>
-                                <span>Matplotlib</span>
-                                <span>Seaborn</span>
-                                <span>GitHub</span>
-                            </div>
-                            <a class="btn primary" href="https://github.com/hesandism/data-analysis-for-tea-industry.git"
-                                target="_blank" rel="noopener">View Research on GitHub</a>
-                        </div>
-                    </article>
-                </div>
-            </section>
+                <div class="hero-text">
 
-            <section id="education" class="section">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>Education</h2>
-                        <p>Academic background and focus.</p>
-                    </div>
-                    <div class="education-card">
-                        <h3>Faculty of Engineering</h3>
-                        <p>University of Moratuwa</p>
-                        <p>Department of Computer Science and Engineering</p>
-                        <p>Focus: Data Science, Machine Learning, Robotics</p>
-                    </div>
-                </div>
-            </section>
+                    <span class="eyebrow">
+                        Portfolio Version 3.0
+                    </span>
 
-            <section id="contact" class="section">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>Contact</h2>
-                        <p>Open to internships, research opportunities, and collaborations.</p>
-                    </div>
-                    <div class="contact-card">
-                        <div>
-                            <h3>Let's Connect</h3>
-                            <p>If you would like to discuss a project or research idea, feel free to reach out.</p>
-                        </div>
-                        <div class="contact-links">
-                            <a class="contact-link" href="mailto:Thilokyaangeesa@gmail.com">Thilokyaangeesa@gmail.com</a>
-                            <a class="contact-link" href="https://www.linkedin.com/in/thilokya-angeesa-2867462b0" target="_blank"
-                                rel="noopener">LinkedIn</a>
-                            <a class="contact-link" href="https://github.com/Thilokya03" target="_blank" rel="noopener">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                    <h1>
+                        Hi, I'm Thilokya Angeesa
+                    </h1>
 
-            <section id="github" class="section">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>GitHub</h2>
-                        <p>Repositories and collaborative work.</p>
-                    </div>
-                    <div class="github-grid">
-                        <a class="github-card" href="https://github.com/Thilokya03" target="_blank" rel="noopener">
-                            <h3>GitHub Profile</h3>
-                            <p>Explore my latest projects and research notebooks.</p>
+                    <p class="hero-subtitle">
+                        Computer Science & Engineering Undergraduate |
+                        Data Science | Machine Learning | Software Engineering
+                    </p>
+
+                    <p class="hero-description">
+                        I am a Computer Science and Engineering undergraduate
+                        at the University of Moratuwa, building data-driven and
+                        intelligent systems through machine learning, software
+                        engineering, research, automation, and robotics.
+                    </p>
+
+                    <div class="cta-group">
+                        <a class="btn primary" href="#research">
+                            View Research
                         </a>
-                        <a class="github-card" href="https://github.com/hesandism/data-analysis-for-tea-industry.git" target="_blank"
-                            rel="noopener">
-                            <h3>Tea Auction Research</h3>
-                            <p>Collaborative data science workflow and analysis pipeline.</p>
+
+                        <a class="btn ghost" href="#projects">
+                            View Projects
+                        </a>
+
+                        <a
+                            class="btn ghost"
+                            href="./assets/Thilokya_Angeesa_CV.pdf"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Download CV
+                        </a>
+
+                        <a
+                            class="btn ghost"
+                            href="https://github.com/Thilokya03"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
                         </a>
                     </div>
-                </div>
-            </section>
-        </main>
 
-        <footer class="site-footer">
-            <div class="container">
-                <p>Portfolio Version 2.0 • Thilokya Angeesa</p>
+                    <div class="hero-badges">
+                        <span>Machine Learning</span>
+                        <span>Data Engineering</span>
+                        <span>Software Engineering</span>
+                        <span>Research</span>
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+                    <div class="portrait-card">
+
+                        <img
+                            src="./assets/profilePhoto.png"
+                            alt="Portrait of Thilokya Angeesa"
+                        >
+
+                        <div class="portrait-caption">
+                            <p>Department of Computer Science and Engineering</p>
+                            <p>University of Moratuwa</p>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
-        </footer>
-    </body>
+        </section>
+
+
+        <!-- =================================================
+             1. ABOUT
+        ================================================== -->
+        <section id="about" class="section">
+            <div class="container">
+
+                <div class="section-header">
+                    <h2>About</h2>
+                    <p>
+                        Building practical systems through data, software,
+                        intelligent automation, and research.
+                    </p>
+                </div>
+
+                <div class="split-card">
+
+                    <p>
+                        I am a Computer Science and Engineering undergraduate
+                        at the University of Moratuwa with interests in machine
+                        learning, data science, software engineering, and
+                        intelligent systems. I enjoy solving real-world
+                        problems by combining data, algorithms, and reliable
+                        software engineering practices.
+                    </p>
+
+                    <p>
+                        My experience includes machine learning research,
+                        computer vision, data engineering, full-stack
+                        development, robotics, embedded systems, and
+                        automation. I value reproducible workflows,
+                        collaborative engineering, and projects that transform
+                        ideas into useful and measurable outcomes.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             2. EDUCATION
+        ================================================== -->
+        <section id="education" class="section">
+            <div class="container">
+
+                <div class="section-header">
+                    <h2>Education</h2>
+                    <p>
+                        Academic background and areas of study.
+                    </p>
+                </div>
+
+                <div class="education-card">
+
+                    <h3>
+                        B.Sc. Engineering (Hons.) in Computer Science and Engineering
+                    </h3>
+
+                    <p>
+                        Department of Computer Science and Engineering
+                    </p>
+
+                    <p>
+                        Faculty of Engineering, University of Moratuwa
+                    </p>
+
+                    <p>
+                        2024 – Present
+                    </p>
+
+                    <p>
+                        Areas of interest: Machine Learning, Data Science,
+                        Software Engineering, Databases, Algorithms,
+                        Computer Architecture, and Robotics.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             3. RESEARCH & PUBLICATIONS
+        ================================================== -->
+        <section id="research" class="section">
+            <div class="container">
+
+                <div class="section-header">
+                    <h2>Research & Publications</h2>
+                    <p>
+                        Research publications and reusable public data contributions.
+                    </p>
+                </div>
+
+
+                <!-- -----------------------------------------
+                     MERCon 2026 Research
+                ------------------------------------------ -->
+                <article class="research-card">
+
+                    <div class="research-header">
+
+                        <span class="badge">
+                            MERCon 2026 — Accepted
+                        </span>
+
+                        <h3>
+                            Forecasting Weather-Driven Price Dynamics Across
+                            Sri Lankan Tea Market Catalogues
+                        </h3>
+
+                        <p class="research-type">
+                            Research | Data Science | Machine Learning |
+                            Time Series Forecasting
+                        </p>
+
+                    </div>
+
+
+                    <p class="research-summary">
+                        A collaborative research project investigating
+                        weather-driven and market-related factors affecting
+                        Sri Lankan tea auction prices. The workflow transforms
+                        real-world semi-structured auction reports into
+                        analysis-ready datasets, integrates production,
+                        catalogue, and weather information, and supports
+                        exploratory, causal, and predictive analysis.
+                    </p>
+
+
+                    <p class="research-highlight">
+                        The research has been accepted to MERCon 2026 and
+                        demonstrates an end-to-end workflow from real-world
+                        data extraction and feature engineering to
+                        time-aware machine learning and forecasting.
+                    </p>
+
+
+                    <div class="research-columns">
+
+                        <div>
+                            <h4>Key Contributions</h4>
+
+                            <ul>
+                                <li>
+                                    Tea auction report and PDF data processing
+                                </li>
+                                <li>
+                                    Weather and market data integration
+                                </li>
+                                <li>
+                                    Data cleaning and feature engineering
+                                </li>
+                                <li>
+                                    Exploratory and time-series analysis
+                                </li>
+                                <li>
+                                    Causality and predictive modeling workflow
+                                </li>
+                                <li>
+                                    Reproducible collaborative research pipeline
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+                    <div class="research-footer">
+
+                        <div class="tag-row">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Scikit-learn</span>
+                            <span>XGBoost</span>
+                            <span>LightGBM</span>
+                            <span>Time Series</span>
+                            <span>Jupyter Notebook</span>
+                        </div>
+
+                        <div class="cta-group">
+                            <a
+                                class="btn primary"
+                                href="https://github.com/hesandism/data-analysis-for-tea-industry.git"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View Research on GitHub
+                            </a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- -----------------------------------------
+                     Published Dataset
+                ------------------------------------------ -->
+                <article class="research-card">
+
+                    <div class="research-header">
+
+                        <span class="badge">
+                            Published Dataset
+                        </span>
+
+                        <h3>
+                            Sri Lanka Holiday Dataset
+                        </h3>
+
+                        <p class="research-type">
+                            Data Engineering | Public Dataset |
+                            Calendar & Holiday Analytics
+                        </p>
+
+                    </div>
+
+
+                    <p class="research-summary">
+                        A publicly released Sri Lankan holiday and calendar
+                        dataset created by collecting, cleaning, validating,
+                        and integrating holiday information from public
+                        sources. The dataset is designed to support data
+                        science, forecasting, time-series analysis, and other
+                        applications that require structured Sri Lankan
+                        calendar features.
+                    </p>
+
+
+                    <p class="research-highlight">
+                        Published on Hugging Face as a reusable public data
+                        resource for research, analytics, machine learning,
+                        and forecasting workflows.
+                    </p>
+
+
+                    <div class="research-columns">
+
+                        <div>
+                            <h4>Key Contributions</h4>
+
+                            <ul>
+                                <li>
+                                    Structured Sri Lankan holiday and calendar data
+                                </li>
+                                <li>
+                                    Automated data collection and processing workflows
+                                </li>
+                                <li>
+                                    Data cleaning, normalization, and validation
+                                </li>
+                                <li>
+                                    Analysis-ready calendar features
+                                </li>
+                                <li>
+                                    Reusable public dataset for research and forecasting
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+                    <div class="research-footer">
+
+                        <div class="tag-row">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Data Engineering</span>
+                            <span>Web Scraping</span>
+                            <span>GitHub Actions</span>
+                            <span>Hugging Face</span>
+                        </div>
+
+                        <div class="cta-group">
+
+                            <a
+                                class="btn primary"
+                                href="https://huggingface.co/datasets/Thilokya03/Sri-Lanka-Holiday-Dataset"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View Dataset on Hugging Face
+                            </a>
+
+                            <a
+                                class="btn ghost"
+                                href="https://github.com/Thilokya03/Sri-Lanka-Holiday-Dataset"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View Source on GitHub
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             4. SKILLS
+        ================================================== -->
+        <section id="skills" class="section">
+            <div class="container">
+
+                <div class="section-header">
+                    <h2>Skills</h2>
+                    <p>
+                        Technologies, tools, and engineering areas used across
+                        my academic, research, and project work.
+                    </p>
+                </div>
+
+
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+                        <h3>Programming</h3>
+                        <p>
+                            Python, Java, JavaScript, TypeScript,
+                            SQL, C++, VHDL
+                        </p>
+                    </div>
+
+
+                    <div class="skill-card">
+                        <h3>Machine Learning & AI</h3>
+                        <p>
+                            PyTorch, Scikit-learn, XGBoost, LightGBM,
+                            Deep Learning, Computer Vision
+                        </p>
+                    </div>
+
+
+                    <div class="skill-card">
+                        <h3>Data Science</h3>
+                        <p>
+                            Pandas, NumPy, Matplotlib, Seaborn,
+                            Jupyter Notebook, Feature Engineering,
+                            Time-Series Analysis
+                        </p>
+                    </div>
+
+
+                    <div class="skill-card">
+                        <h3>Web Development</h3>
+                        <p>
+                            React, Node.js, Express.js, REST APIs,
+                            HTML, CSS
+                        </p>
+                    </div>
+
+
+                    <div class="skill-card">
+                        <h3>Databases & Engineering Tools</h3>
+                        <p>
+                            PostgreSQL, MySQL, Git, GitHub,
+                            Docker, GitHub Actions
+                        </p>
+                    </div>
+
+
+                    <div class="skill-card">
+                        <h3>Robotics & Hardware</h3>
+                        <p>
+                            ROS 2, OpenCV, Embedded Systems,
+                            Robotics, FPGA, Digital Logic
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             5. PROJECTS
+        ================================================== -->
+        <section id="projects" class="section">
+            <div class="container">
+
+                <div class="section-header">
+                    <h2>Projects</h2>
+                    <p>
+                        Selected software engineering, artificial intelligence,
+                        robotics, embedded systems, and computer architecture work.
+                    </p>
+                </div>
+
+                <!--
+                    Project cards are loaded dynamically from:
+                    ./assets/projects.json
+
+                    The updated script.js excludes:
+                    ID 1 - Tea Research
+                    ID 8 - Sri Lanka Holiday Dataset
+
+                    because those are already shown in
+                    Research & Publications.
+                -->
+                <div
+                    class="projects-grid"
+                    id="projectsContainer"
+                    aria-live="polite"
+                ></div>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             6. CONTACT
+        ================================================== -->
+        <section id="contact" class="section">
+            <div class="container">
+
+                <div class="section-header">
+                    <h2>Contact</h2>
+                    <p>
+                        Open to internships, research opportunities,
+                        collaborations, and engineering projects.
+                    </p>
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div>
+                        <h3>Let's Connect</h3>
+
+                        <p>
+                            I am interested in opportunities in software
+                            engineering, data science, machine learning, and
+                            research. Feel free to reach out to discuss an
+                            internship, project, research idea, or collaboration.
+                        </p>
+                    </div>
+
+
+                    <div class="contact-links">
+
+                        <a
+                            class="contact-link"
+                            href="mailto:Thilokyaangeesa@gmail.com"
+                        >
+                            Email
+                        </a>
+
+                        <a
+                            class="contact-link"
+                            href="https://www.linkedin.com/in/thilokya-angeesa-2867462b0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn
+                        </a>
+
+                        <a
+                            class="contact-link"
+                            href="https://github.com/Thilokya03"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
+
+                        <a
+                            class="contact-link"
+                            href="./assets/Thilokya_Angeesa_CV.pdf"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Download CV
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                Portfolio Version 3.0 • Thilokya Angeesa
+            </p>
+        </div>
+    </footer>
+
+</body>
 </html>
